@@ -53,7 +53,7 @@ d_gemeinden <- d_gemeinden[3] %>% as.data.frame() %>% tail(-3)
 d_gemeinden <- clean_election_results_table_bavaria_2013(d_gemeinden)
 d_gemeinden$jahr <- 2013
 d_gemeinden$region <- "gemeinde"
-write.table(d_gemeinden, "data/btw_bayern_gemeinden_2013.csv", row.names = F, quote = F)
+write.table(d_gemeinden, "data/btw_bayern_gemeinden_2013.csv", row.names = F, quote = F, sep=";")
 
 ################
 # Kreise
@@ -63,4 +63,4 @@ d_kreise <- d_kreise[2] %>% as.data.frame() %>% tail(-3)
 d_kreise <- clean_election_results_table_bavaria_2013(d_kreise)
 d_kreise$jahr <- 2013
 d_kreise$region <- "kreis"
-write.table(d_gemeinden, "data/btw_bayern_kreise_2013.csv", row.names = F, quote = F)
+write.table(d_gemeinden, "data/btw_bayern_kreise_2013.csv", row.names = F, quote = F, sep=";")
